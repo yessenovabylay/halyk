@@ -1,0 +1,1 @@
+var VBwidgetConfig={broker:"https://web-videobank.halykbank.kz/broker-cc",clientAppUrl:"https://web-videobank.halykbank.kz/qa/cc/client/#/startcall/{{callHash}}"};

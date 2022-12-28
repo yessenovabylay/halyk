@@ -1,0 +1,89 @@
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.w3.org/1999/xhtml"
+      layout:decorate="~{layout/main}" >
+<div layout:fragment="mainContainer">
+
+    <!-- .content -->
+    <main class="content _js-bvi-filter">
+
+    </main>
+    <!-- end .content -->
+</div>
+<!-- .footer -->
+<footer class="bg-gray-50 py-10 _js-bvi-filter">
+    <div class="container">
+        <div class="flex flex-wrap justify-between -gw">
+            <div class="w-6/12 gw &lt;md:w-full &lt;md:order-1">
+                <div class="mb-4 &lt;md:hidden">
+                    <ul class="flex -gw">
+                        <li class="gw" role="presentation">
+                            <a href="https://halykbank.kz/tariffs">
+                                Тарифы
+                            </a>
+                        </li>
+                        <li class="gw" role="presentation">
+                            <a href="https://halykbank.kz/documents">
+                                Документы
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="text-sm text-gray-600 mb-4">
+                    <p>Лицензия на проведение банковских и иных операций и деятельности на рынке ценных бумаг №1.2.47/230/38/1 от 3 февраля 2020 года выдана Агентством Республики Казахстан по регулированию и развитию финансового рынка</p>
+                </div>
+                <div class="text-sm text-gray-600">
+                    powered by <a href="http://amphibia.kz/" class="underline underline-offset-3">amphibia</a>
+                </div>
+            </div>
+            <div class="w-5/12 gw &lt;md:w-full &lt;md:mb-8">
+                <div class="mb-4 md:hidden">
+                    <ul class="flex -gw">
+                        <li class="gw" role="presentation">
+                            <a href="https://halykbank.kz/tariffs">
+                                Тарифы
+                            </a>
+                        </li>
+                        <li class="gw" role="presentation">
+                            <a href="https://halykbank.kz/documents">
+                                Документы
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="mb-8">
+                    <ul class="flex flex-wrap -mx-1 not-dark">
+                        <li class="px-1"><a href="https://apps.apple.com/us/app/homebank-kz/id440635615" class="inline-block bg-black rounded-md"><img th:src="@{'/aksia/appstore.svg'}" alt=""></a></li>
+                        <li class="px-1"><a href="https://play.google.com/store/apps/details?id=kz.kkb.homebank" class="inline-block bg-black rounded-md"><img th:src="@{'/aksia/google-play.svg'}" alt=""></a></li>
+                        <li class="px-1"><a href="https://appgallery.cloud.huawei.com/ag/n/app/C102945379?locale=ru_RU&amp;source=halykbank.kz" class="inline-block bg-black rounded-md"><img th:src="@{'/aksia/appgallery.svg'}" alt=""></a></li>
+                    </ul>
+                </div>
+                <div class="flex -gw">
+                    <div class="w-2/5 gw">
+                        <div class="mb-2">Контакт-центр</div>
+                        <a href="tel:7111" class="inline-flex items-center text-sm"><span class="mr-1 w-6 h-6 text-primary text-[24px]"><i class="icon icon-phone"></i></span>7111</a>
+                    </div>
+                    <div class="w-2/5 gw">
+                        <div class="mb-2">Мы в соц. сетях</div>
+                        <ul class="flex -mx-1 text-[24px]">
+                            <li class="px-1"><a href="https://www.facebook.com/halykbank/" target="_blank" class="inline-block"><i class="icon icon-fb"></i></a></li>
+                            <li class="px-1"><a href="https://www.instagram.com/halykbank.kz/" target="_blank" class="inline-block"><i class="icon icon-ins"></i></a></li>
+                            <li class="px-1"><a href="https://twitter.com/halykbank_kz" target="_blank" class="inline-block"><i class="icon icon-tw"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer><!-- end .footer -->
+
+
+<div class="fixed right-[90px] bottom-6 z-[15]">
+    <div>
+        <button class="btn btn-primary rounded-[50px] inline-flex items-center text-lg" onclick="window.openVideocallWidget()">
+            <span class="text-[24px] mr-1"><i class="icon icon-videocam"></i></span>
+            Видеозвонок
+        </button>
+    </div>
+</div>
+
+</html>

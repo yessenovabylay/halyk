@@ -1,0 +1,111 @@
+<html class="no-js" lang="zxx"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/html"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
+
+><head>
+
+        <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=device-width">
+
+        <link rel="stylesheet" media="screen" th:href="@{'/aksia/fonts.css'}">
+        <link rel="stylesheet" media="screen" th:href="@{'/aksia/app.css'}">
+        <title>Акции Halyk Bank</title>
+        <meta name="title" content="Акции Halyk Bank">
+
+
+
+</head>
+<body>
+<form th:action="@{'/signout'}" method="post" id="signOutFormId">
+
+</form>
+<script type="text/javascript">
+    function signOut(){
+        document.getElementById("signOutFormId").submit();
+    }
+</script>
+
+<!-- .header -->
+<header class="relative bg-white z-50 shadow-md &lt;md:hidden _js-bvi-filter">
+    <div class="container">
+        <div class="flex items-center -gw">
+            <div class="w-2/12 gw">
+                <a th:href="@{'/'}">
+                    <img th:src="@{'/aksia/logo.svg'}" width="165" height="58" alt="logo">
+                </a>
+            </div>
+            <div class="w-10/12 gw">
+                <div class="flex items-center justify-between border-b border-gray-50 py-2.5">
+                    <div class="">
+                        <!-- nav-main -->
+                        <div class="text-sm text-gray-400">
+                            <ul class="flex -mx-2">
+                                <li class="px-2"><a th:href="@{'/'}" class=" text-primary ">Частным клиентам</a></li>
+                                <li  sec:authorize="hasAnyRole('ROLE_MODERATOR')" class="px-2"><a th:href="@{'/admin'}" class="">Администрирование</a></li>
+                                <li  sec:authorize="isAuthenticated()" class="px-2"><a th:href="@{'/profile'}" class="" th:text="${currentUser.getEmail()}"></a></li>
+                                <li sec:authorize="isAnonymous()" class="px-2"><a th:href="@{'/signin'}" class="">SignIn</a></li>
+                                <li sec:authorize="isAnonymous()" class="px-2"><a th:href="@{'/signup'}" class="">SignUp</a></li>
+                                <li class="px-2" sec:authorize="isAuthenticated()"><a href="JavaScript:void(0)" onclick="signOut()" class="">LogOut</a></li>
+                            </ul>
+                        </div><!-- end nav-main -->
+                    </div>
+
+                </div>
+                <div class="flex items-center justify-between py-1.5 &lt;md:h-auto h-[44px]">
+                    <div class="">
+                        <div class="">
+                            <div class="">
+                                <div class="flex -mx-2">
+                                    <div class="px-2 group _css-hover-group ">
+                                        <a th:href="@{'/'}" class="block relative group-hover:text-primary">
+                                            Halyk Homebank
+                                            <span class="absolute inset-x-0 top-full h-[12px]"></span>
+                                            <span class="bg-primary absolute inset-x-0 h-[3px] bottom-[-12px] opacity-0 group-hover:opacity-100"></span>
+                                        </a>
+                                    </div>
+                                    <div class="px-2 group _css-hover-group active">
+                                        <a th:href="@{'/items'}" class="block relative group-hover:text-primary">
+                                            Магазин
+                                            <span class="absolute inset-x-0 top-full h-[12px]"></span>
+                                            <span class="bg-primary absolute inset-x-0 h-[3px] bottom-[-12px] opacity-0 group-hover:opacity-100"></span>
+                                        </a>
+                                    </div>
+                                    <div class="px-2 group _css-hover-group active">
+                                        <a th:href="@{'/kredits'}" class="block relative group-hover:text-primary">
+                                            Кредиты
+                                            <span class="absolute inset-x-0 top-full h-[12px]"></span>
+                                            <span class="bg-primary absolute inset-x-0 h-[3px] bottom-[-12px] opacity-0 group-hover:opacity-100"></span>
+                                        </a>
+                                    </div>
+                                    <div class="px-2 group _css-hover-group ">
+                                        <a th:href="@{'/perevod'}" class="block relative group-hover:text-primary">
+                                            Перевод
+                                            <span class="absolute inset-x-0 top-full h-[12px]"></span>
+                                            <span class="bg-primary absolute inset-x-0 h-[3px] bottom-[-12px] opacity-0 group-hover:opacity-100"></span>
+                                        </a>
+                                    </div>
+                                    <div class="px-2 group _css-hover-group ">
+                                        <a th:href="@{'/payments'}" class="block relative group-hover:text-primary">
+                                            Платежи
+                                            <span class="absolute inset-x-0 top-full h-[12px]"></span>
+                                            <span class="bg-primary absolute inset-x-0 h-[3px] bottom-[-12px] opacity-0 group-hover:opacity-100"></span>
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header><!-- end .header -->        <!-- .header -->
+
+<div layout:fragment="mainContainer">
+
+
+</div>
+</body>
+
+</html>
